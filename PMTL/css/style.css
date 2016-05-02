@@ -1,3 +1,9 @@
+body{
+    display:none;
+}
+#goTop{  
+    font-size:25px;
+}
 #P1{
     position:absolute;
 
