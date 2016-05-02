@@ -18,7 +18,7 @@ angular
                 };
         };
         
-        self.getTask = function(){
+        self.getTasks = function(){
             //code
             List.getTasks()
             .then(function(res){
