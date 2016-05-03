@@ -14,23 +14,23 @@ angular
         
         this.addTask = function(newTaskText){
             var data = {
-                text:newTaskText
+                'text':newTaskText
             };
             return $http.post(this.baseURL + '/tasks',data);
         };
         
         this.getTasks = function(){
-            return $http.get(this.baseURL+'/tasks',data);
+            return $http.get(this.baseURL + '/tasks');
         };
         
         this.updateTask = function(task){
             var data = {
                 isDone: task.isDone
             };
-            return $http.patch(this.baseURL + '/tasks/:id',data);
+            return $http.patch(this.baseURL + '/tasks/' + task.id,data);
         };
         
         this.deleteTask = function(taskID){
-            return $http.delete(this.baseURL + '/tasks/:id',taskID);
+            return $http.delete(this.baseURL + '/tasks/' + taskID);
         };
     };
