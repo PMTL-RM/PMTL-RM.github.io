@@ -14,6 +14,9 @@
 
     <link href="css/style.css" rel="stylesheet">
     
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    
     <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified CSS -->
@@ -29,16 +32,37 @@
     <script type="text/javascript" src="js/body_fadIn.js"></script>
     
     <script type="text/javascript" src="js/goTop.js"></script> 
+    
+    <script type="text/javascript" src="js/sticky.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+    
+    <script>
+        $(function () {
+            //scroll down
+            $("").bind('click', function (event) {
+                event.preventDefault();//先取消超連結原本預設動作
+                var $anchor = $(this);
+                $('body').animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1000, 'easeInOutQuint');
+            });
+
+            
+        });
+    </script>
+        
 </head>
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid" >
 	<div class="row">
 		<div class="col-md-12">
-			<div class="row" id="upper">
+			<div class="row">
 				<div class="col-md-1">
 					<img alt="Bootstrap Image Preview" src="./images/FUN-RUN-2013-252X300.png">
 				</div>
+                <div id="sticker">
 				<div class="col-md-11">
 					<nav class="navbar navbar-default" role="navigation">
 						<div class="navbar-header">
@@ -91,8 +115,10 @@
 						
 					</nav>
 				</div>
+                </div>
 			</div>
-			<div id="introduction" class="jumbotron well">
+            <div id="introduction">
+			<div class="jumbotron well">
                 <div class="text-center">
                     <h2 class="text-info">
                         Running Man
@@ -108,6 +134,7 @@
                     <a class="btn btn-primary btn-large" href="#">Start Running</a>
 				</p>
 			</div>
+            </div>
 			<div class="carousel slide" id="carousel-321490">
 				<ol class="carousel-indicators">
 					<li class="active" data-slide-to="0" data-target="#carousel-321490">
@@ -222,7 +249,7 @@
 						<a class="btn" href="#">View details »</a>
 					</p>
 				</div>
-            </div><br/><br/><br/><br/><br/>
+            </div><br/>
             
             
             
