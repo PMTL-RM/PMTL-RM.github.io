@@ -17,7 +17,8 @@
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
-    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scroll_down.js"></script>
+    
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -35,23 +36,7 @@
     
     <script type="text/javascript" src="js/sticky.js"></script>
     
-    <script type="text/javascript" src="js/jquery.sticky.js"></script>
-    
-    <script>
-        $(function () {
-            //scroll down
-            $("").bind('click', function (event) {
-                event.preventDefault();//先取消超連結原本預設動作
-                var $anchor = $(this);
-                $('body').animate({
-                    scrollTop: $($anchor.attr('href')).offset().top
-                }, 1000, 'easeInOutQuint');
-            });
-
-            
-        });
-    </script>
-        
+    <script type="text/javascript" src="js/jquery.sticky.js"></script>        
 </head>
 <body>
 
@@ -88,27 +73,6 @@
 								</li>
                                 <li>
 									<a href="#contact">聯絡</a>
-								</li>
-							</ul>
-							
-							<ul class="nav navbar-nav navbar-right">
-								
-								<li class="dropdown">
-									 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-									<ul class="dropdown-menu">
-										<li >
-											<a href="#introduction">簡介</a>
-										</li>
-										<li>
-											<a href="#carousel-321490">照片</a>
-										</li>
-										<li>
-											<a href="#itmain">內容</a>
-										</li>
-										<li>
-											<a href="#contact">聯絡</a>
-										</li>
-									</ul>
 								</li>
 							</ul>
 						</div>
