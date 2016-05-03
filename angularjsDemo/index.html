@@ -7,32 +7,55 @@
     <script src="app.js"></script>
     <script src="list.service.js"></script>
     <script src="listCtrl.controller.js"></script>
+    
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    
 </head>
+
+<style>
+
+#Listmain{
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+</style>
 
 <body ng-app="BrianList">
     <div ng-controller="ListCtrl as vm">
+        <div class="jumbotron well" id="Listmain">
+            <h1>BrianList</h1>
     
-        <form ng-submit="vm.auth(vm.listName)" >
-    
-            <input type="text" ng-model="vm.listName" /> 
-       
-        </form>
+            <form class="form">
+                <input type="text" ng-model="vm.listName" /> 
+                <button ng-click="vm.auth(vm.listName)">login</button>
+            </form>
         
-        <form ng-submit="vm.addTask(vm.newTaskText)" >
-    
-            <input type="text" ng-model="vm.newTaskText" /> 
-       
-        </form>
-    
-    
-        <ul>
-            <li ng-repeat="task in vm.tasks">
-                <input type="checkbox" ng-model="task.isDone" ng-change="vm.updateTask(task)"/>
-                <span ng-bind="task.text"></span>
-                <button ng-click="vm.deleteTask(task.id)">delete</button>
-            </li>
-        </ul>
-        <button ng-click="vm.getTasks()">Refresh</button>
+            <form class="form">
+                <input type="text" ng-model="vm.newTaskText" /> 
+                <button ng-click="vm.addTask(vm.newTaskText)">addTask</button>
+            </form>
+            
+            <ul>
+                <li ng-repeat="task in vm.tasks">
+                    <input type="checkbox" ng-model="task.isDone" ng-change="vm.updateTask(task)"/>
+                    <span ng-bind="task.text"></span>
+                    <button ng-click="vm.deleteTask(task.id)">delete</button>
+                </li>
+            </ul>
+            <button ng-click="vm.getTasks(listName)">Refresh</button>
+        </div>
     </div>
    
 </body>
