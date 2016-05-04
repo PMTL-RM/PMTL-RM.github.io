@@ -28,6 +28,7 @@
     width: 60%;
     border: 3px solid #73AD21;
     padding: 10px;
+    text-align:center;
 }
 
 </style>
@@ -41,10 +42,10 @@
                 <input type="text" ng-model="vm.listName" /> 
                 <button ng-click="vm.auth(vm.listName)">login</button>
             </form>
-        
+            <br/>
             <form class="form">
                 <input type="text" ng-model="vm.newTaskText" /> 
-                <button ng-click="vm.addTask(vm.newTaskText)">addTask</button>
+                <button ng-click="vm.addTask(vm.newTaskText)">add!!</button>
             </form>
             
             <ul>
