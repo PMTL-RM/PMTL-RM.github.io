@@ -135,11 +135,16 @@ public class MainActivity extends AppCompatActivity
             case R.id.about:
                 new AlertDialog.Builder(this) // 用交談窗顯示程式版本與版權聲明
                         .setTitle("關於 我的地圖")
-                        .setMessage("我的地圖 體驗版 v1.0\nCopyright 2015 Flag Corp.")
+                        .setMessage("作者：\n劉兆倫")
                         .setPositiveButton("關閉", null)
                         .show();
+                break;
+            case R.id.finish:
+                finish();
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
