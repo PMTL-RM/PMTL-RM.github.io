@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "tw.com.flag.ch14_mymap"
+        applicationId "tw.com.flag.RM_MAP"
         minSdkVersion 9
         targetSdkVersion 22
         versionCode 1

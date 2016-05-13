@@ -1,4 +1,4 @@
-package tw.com.flag.ch14_mymap;
+package tw.com.flag.RM_MAP;
 
 import android.app.AlertDialog;
 import android.content.Intent;
